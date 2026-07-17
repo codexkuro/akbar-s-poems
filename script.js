@@ -16,14 +16,14 @@ titleElement.addEventListener('click', () => {
     clickCount++;
 
     if (clickCount === 1) {
-        // Mulai timer 1.5 detik. Kalau klik ga sampe 3, hitungan di-reset.
+        // Mulai timer 1.5 detik. Kalau klik ga sampe 6, hitungan di-reset.
         clickTimer = setTimeout(() => {
             clickCount = 0;
         }, 1500);
     }
 
-    // Kalau berhasil klik 3 kali secara cepat
-    if (clickCount === 3) {
+    // Kalau berhasil klik 6 kali secara cepat
+    if (clickCount === 6) {
         clearTimeout(clickTimer); // Hentikan timer
         clickCount = 0; // Reset hitungan
         showSecret(); // Munculin pesan
